@@ -3,9 +3,13 @@ package com.example.battlebeasts;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-//@Entity(tableName = AppDataBase.GYMLOG_TABLE)
+import com.example.battlebeasts.db.AppDataBase;
+
+@Entity(tableName = AppDataBase.BATTLELOG_TABLE)
 public class BattleLog {
   @PrimaryKey(autoGenerate = true)
+  private int mLogId;
+
   private String mPlayerName;
   private String mOpponentName;
   private String mPlayerAttack;
@@ -114,5 +118,11 @@ public class BattleLog {
     return "toString in BattleLog.java failed. Bhavik you missed a condition in BattleLog.java file";
   }
 
+  public int getLogId() {
+    return mLogId;
+  }
 
+  public void setLogId(int logId) {
+    mLogId = logId;
+  }
 }
