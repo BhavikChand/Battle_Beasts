@@ -48,6 +48,11 @@ public class BattleLog {
   public String toString() {
     //With Death (DO NOT DISPLAY NEXT ATTACK) (Requires Death Text)
     //Player Player Turn Player Mega Effective Attack Check
+
+    /**
+     * Might need to add mLogId to toString, Check Part 2 in video here: https://www.youtube.com/watch?v=2fArFXH5_MA
+     */
+
     if (mTurnCheck == 0 && mMegaEffectivePlayerAttack == 2 && mOpponentHp == 0) {
       return "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Turn Count: " + mTurnCount + " =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" + "\n" +
               mPlayerName + " used " + mPlayerAttack + "!" + "\n" +

@@ -21,6 +21,9 @@ public abstract class AppDataBase extends RoomDatabase {
   private static volatile AppDataBase instance;
   private static final Object LOCK = new Object();
 
+  //Never implement this, the room wrapper creates this for us
+  public abstract BattleLogDAO BattleLogDAO();
+
   //Singleton class
   public static AppDataBase getInstance(Context context) {
     if (instance == null) {

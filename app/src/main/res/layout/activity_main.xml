@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Demo Public User"
-        tools:layout_editor_absoluteX="385dp"
+        tools:layout_editor_absoluteX="344dp"
         tools:layout_editor_absoluteY="319dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
