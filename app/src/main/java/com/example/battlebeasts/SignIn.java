@@ -87,7 +87,7 @@ public class SignIn extends AppCompatActivity {
 
   //Intent Factory: Go from Log In Activity to Game Battle Beasts Menu
   public static Intent intentFactory(Context context) {
-    Intent intent = new Intent(context, BattleBeastsMenuPage.class);
+    Intent intent = new Intent(context, SignIn.class);
 
     return intent;
   }

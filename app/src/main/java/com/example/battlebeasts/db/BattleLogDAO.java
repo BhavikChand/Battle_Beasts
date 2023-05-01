@@ -48,7 +48,7 @@ public interface BattleLogDAO {
   List<User> getAllBattleUsers();
 
   @Query("SELECT * FROM " + AppDataBase.USER_TABLE + " WHERE mUserName = :userName")
-  List<User> getUserByUserName(String userName);
+  User getUserByUserName(String userName);
 
   @Query("SELECT * FROM " + AppDataBase.USER_TABLE + " WHERE mUserId = :userId")
   User getUserByUserId(int userId);

@@ -7,4 +7,6 @@
     <string name="view_monsters">View Monsters</string>
     <string name="battle">Battle</string>
     <string name="sign_out">Sign Out</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

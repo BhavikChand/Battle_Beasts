@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
   private void logoutUser() {
     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
 
-    alertBuilder.setMessage(R.string.logout);
+    alertBuilder.setMessage(R.string.sign_out);
 
     alertBuilder.setPositiveButton(getString(R.string.yes),
             new DialogInterface.OnClickListener() {
@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public static Intent intentFactory(Context context, int userId) {
+    //                         Intent(at, going);
     Intent intent = new Intent(context, MainActivity.class);
     intent.putExtra(USER_ID_KEY, userId);
 

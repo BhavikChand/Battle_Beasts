@@ -27,12 +27,12 @@ public class User {
     mTeamId = teamId;
   }
 
-  public User(String userName, String password, int teamId, String avatarImgUrl) {
-    mUserName = userName;
-    mPassword = password;
-    mTeamId = teamId;
-    mAvatarImgUrl = avatarImgUrl;
-  }
+//  public User(String userName, String password, int teamId, String avatarImgUrl) {
+//    mUserName = userName;
+//    mPassword = password;
+//    mTeamId = teamId;
+//    mAvatarImgUrl = avatarImgUrl;
+//  }
 
   //Getters and Setters
   public int getUserId() {

@@ -10,7 +10,7 @@ public class BattleLog {
   @PrimaryKey(autoGenerate = true)
   private int mLogId;
   private int mUserId;
-  private String mPlayerName;
+  private String  mPlayerName;
   private String mOpponentName;
   private String mPlayerAttack;
   private String mOpponentAttack;
@@ -28,20 +28,18 @@ public class BattleLog {
   private int mHpQuotientPlayerHpDmg;
   private int mHpQuotientOpponentHpDmg;
 
-  public BattleLog(String playerName, String opponentName, String playerAttack, String opponentAttack, int megaEffectivePlayerAttack, int megaEffectiveOpponentAttack, int turnCheck, int turnCount, int playerHp, int opponentHp, int hpQuotientPlayerHpDmg, int hpQuotientOpponentHpDmg, int userId) {
+  public BattleLog(int logId, int userId, String playerName, String opponentName, String playerAttack, String opponentAttack, int turnCount, int playerHp, int opponentHp, int hpQuotientPlayerHpDmg, int hpQuotientOpponentHpDmg) {
+    mLogId = logId;
+    mUserId = userId;
     mPlayerName = playerName;
     mOpponentName = opponentName;
     mPlayerAttack = playerAttack;
     mOpponentAttack = opponentAttack;
-    mMegaEffectivePlayerAttack = megaEffectivePlayerAttack;
-    mMegaEffectiveOpponentAttack = megaEffectiveOpponentAttack;
-    mTurnCheck = turnCheck;
     mTurnCount = turnCount;
     mPlayerHp = playerHp;
     mOpponentHp = opponentHp;
     mHpQuotientPlayerHpDmg = hpQuotientPlayerHpDmg;
     mHpQuotientOpponentHpDmg = hpQuotientOpponentHpDmg;
-    mUserId = userId;
   }
 
   //Display Log of Battle
@@ -128,15 +126,120 @@ public class BattleLog {
     return mLogId;
   }
 
-  public void setLogId(int logId) {
-    mLogId = logId;
-  }
+//  public void setLogId(int logId) {
+//    mLogId = logId;
+//  }
 
   public int getUserId() {
     return mUserId;
   }
 
+//  public void setUserId(int userId) {
+//    mUserId = userId;
+//  }
+
+
+  public void setLogId(int logId) {
+    mLogId = logId;
+  }
+
   public void setUserId(int userId) {
     mUserId = userId;
+  }
+
+  public String getPlayerName() {
+    return mPlayerName;
+  }
+
+  public void setPlayerName(String playerName) {
+    mPlayerName = playerName;
+  }
+
+  public String getOpponentName() {
+    return mOpponentName;
+  }
+
+  public void setOpponentName(String opponentName) {
+    mOpponentName = opponentName;
+  }
+
+  public String getPlayerAttack() {
+    return mPlayerAttack;
+  }
+
+  public void setPlayerAttack(String playerAttack) {
+    mPlayerAttack = playerAttack;
+  }
+
+  public String getOpponentAttack() {
+    return mOpponentAttack;
+  }
+
+  public void setOpponentAttack(String opponentAttack) {
+    mOpponentAttack = opponentAttack;
+  }
+
+  public int getMegaEffectivePlayerAttack() {
+    return mMegaEffectivePlayerAttack;
+  }
+
+  public void setMegaEffectivePlayerAttack(int megaEffectivePlayerAttack) {
+    mMegaEffectivePlayerAttack = megaEffectivePlayerAttack;
+  }
+
+  public int getMegaEffectiveOpponentAttack() {
+    return mMegaEffectiveOpponentAttack;
+  }
+
+  public void setMegaEffectiveOpponentAttack(int megaEffectiveOpponentAttack) {
+    mMegaEffectiveOpponentAttack = megaEffectiveOpponentAttack;
+  }
+
+  public int getTurnCheck() {
+    return mTurnCheck;
+  }
+
+  public void setTurnCheck(int turnCheck) {
+    mTurnCheck = turnCheck;
+  }
+
+  public int getTurnCount() {
+    return mTurnCount;
+  }
+
+  public void setTurnCount(int turnCount) {
+    mTurnCount = turnCount;
+  }
+
+  public int getPlayerHp() {
+    return mPlayerHp;
+  }
+
+  public void setPlayerHp(int playerHp) {
+    mPlayerHp = playerHp;
+  }
+
+  public int getOpponentHp() {
+    return mOpponentHp;
+  }
+
+  public void setOpponentHp(int opponentHp) {
+    mOpponentHp = opponentHp;
+  }
+
+  public int getHpQuotientPlayerHpDmg() {
+    return mHpQuotientPlayerHpDmg;
+  }
+
+  public void setHpQuotientPlayerHpDmg(int hpQuotientPlayerHpDmg) {
+    mHpQuotientPlayerHpDmg = hpQuotientPlayerHpDmg;
+  }
+
+  public int getHpQuotientOpponentHpDmg() {
+    return mHpQuotientOpponentHpDmg;
+  }
+
+  public void setHpQuotientOpponentHpDmg(int hpQuotientOpponentHpDmg) {
+    mHpQuotientOpponentHpDmg = hpQuotientOpponentHpDmg;
   }
 }
