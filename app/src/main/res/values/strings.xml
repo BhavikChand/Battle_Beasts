@@ -3,4 +3,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
+    <string name="create_team">Create Team</string>
+    <string name="view_monsters">View Monsters</string>
+    <string name="battle">Battle</string>
 </resources>

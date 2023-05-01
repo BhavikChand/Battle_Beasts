@@ -3,6 +3,8 @@ package com.example.battlebeasts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,12 +27,12 @@ public class SignIn extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_sign_in);
 
-    wireupDisplay();
+    wireUpDisplay();
 
     getDataBase();
   }
 
-  private void wireupDisplay() {
+  private void wireUpDisplay() {
     mUserName = findViewById(R.id.editTextSignInUserName);
     mUserName = findViewById(R.id.editTextSignInPassword);
 
@@ -47,4 +49,13 @@ public class SignIn extends AppCompatActivity {
   private void getDataBase() {
     mBattleLogDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME).allowMainThreadQueries().build().BattleLogDAO();
   }
+
+  //Intent Factory: Go from Log In Activity to Game Battle Beasts Menu
+  public static Intent intentFactory(Context context) {
+    Intent intent = new Intent(context, BattleBeastsMenuPage.class);
+
+    return intent;
+  }
+
+
 }
