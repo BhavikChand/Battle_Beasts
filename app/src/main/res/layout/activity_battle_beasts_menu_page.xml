@@ -33,4 +33,30 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonBattleInMenu"
         app:layout_constraintStart_toEndOf="@+id/buttonCreateTeamInMenu"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonUserMenuSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBattleInMenu"
+        tools:layout_editor_absoluteX="536dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="47dp"
+        tools:layout_editor_absoluteX="566dp"
+        tools:layout_editor_absoluteY="14dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/buttonUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:layout_editor_absoluteY="13dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
