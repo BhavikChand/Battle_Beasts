@@ -8,29 +8,40 @@
 
     <Button
         android:id="@+id/signInPageSignInButton"
-        android:layout_width="256dp"
-        android:layout_height="51dp"
-        android:text="Sign In"
+        android:layout_width="303dp"
+        android:layout_height="94dp"
+        android:text="@string/sign_in"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"
-        tools:layout_editor_absoluteX="237dp" />
+        app:layout_constraintVertical_bias="0.854" />
 
-    <Button
-        android:id="@+id/signInPagePasswordButton"
-        android:layout_width="256dp"
-        android:layout_height="51dp"
+    <EditText
+        android:id="@+id/editTextSignInUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSignInPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <EditText
+        android:id="@+id/editTextSignInPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="Password"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="237dp" />
+        android:ems="10"
+        android:hint="@string/password"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/signInPageUsernameButton"
-        android:layout_width="256dp"
-        android:layout_height="51dp"
-        android:text="Username"
-        app:layout_constraintBottom_toTopOf="@+id/signInPagePasswordButton"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="237dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

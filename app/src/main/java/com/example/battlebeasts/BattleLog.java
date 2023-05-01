@@ -9,7 +9,7 @@ import com.example.battlebeasts.db.AppDataBase;
 public class BattleLog {
   @PrimaryKey(autoGenerate = true)
   private int mLogId;
-
+  private int mUserId;
   private String mPlayerName;
   private String mOpponentName;
   private String mPlayerAttack;
@@ -28,7 +28,7 @@ public class BattleLog {
   private int mHpQuotientPlayerHpDmg;
   private int mHpQuotientOpponentHpDmg;
 
-  public BattleLog(String playerName, String opponentName, String playerAttack, String opponentAttack, int megaEffectivePlayerAttack, int megaEffectiveOpponentAttack, int turnCheck, int turnCount, int playerHp, int opponentHp, int hpQuotientPlayerHpDmg, int hpQuotientOpponentHpDmg) {
+  public BattleLog(String playerName, String opponentName, String playerAttack, String opponentAttack, int megaEffectivePlayerAttack, int megaEffectiveOpponentAttack, int turnCheck, int turnCount, int playerHp, int opponentHp, int hpQuotientPlayerHpDmg, int hpQuotientOpponentHpDmg, int userId) {
     mPlayerName = playerName;
     mOpponentName = opponentName;
     mPlayerAttack = playerAttack;
@@ -41,6 +41,7 @@ public class BattleLog {
     mOpponentHp = opponentHp;
     mHpQuotientPlayerHpDmg = hpQuotientPlayerHpDmg;
     mHpQuotientOpponentHpDmg = hpQuotientOpponentHpDmg;
+    mUserId = userId;
   }
 
   //Display Log of Battle
@@ -99,14 +100,14 @@ public class BattleLog {
     if (mTurnCheck == 0 && mMegaEffectivePlayerAttack == 2 && mMegaEffectiveOpponentAttack == 1) {
       return "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Turn Count: " + mTurnCount + " =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" + "\n" +
               mPlayerName + " used " + mPlayerAttack + "!" + "\n" +
-              "(The opposing " + mOpponentName + " lost " + mHpQuotient + "% of its health!)" + "\n" +
+//              "(The opposing " + mOpponentName + " lost " + mHpQuotient + "% of its health!)" + "\n" +
               "\n";
     };
     if (mTurnCheck == 0 && mMegaEffectivePlayerAttack == 2 && mMegaEffectiveOpponentAttack == 0) {
       return "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Turn Count: " + mTurnCount + " =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" + "\n" +
               mPlayerName + " used " + mPlayerAttack + "!" + "\n" +
               "Not very mega damage..." + "\n" +
-              "(The opposing " + mOpponentName + " lost " + mHpQuotient + "% of its health!)" + "\n" +
+//              "(The opposing " + mOpponentName + " lost " + mHpQuotient + "% of its health!)" + "\n" +
               "\n";
     };
 
@@ -129,5 +130,13 @@ public class BattleLog {
 
   public void setLogId(int logId) {
     mLogId = logId;
+  }
+
+  public int getUserId() {
+    return mUserId;
+  }
+
+  public void setUserId(int userId) {
+    mUserId = userId;
   }
 }

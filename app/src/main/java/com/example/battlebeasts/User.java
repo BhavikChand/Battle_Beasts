@@ -3,7 +3,9 @@ package com.example.battlebeasts;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = AppDatabase.USER_TABLE)
+import com.example.battlebeasts.db.AppDataBase;
+
+@Entity(tableName = AppDataBase.USER_TABLE)
 public class User {
 
   @PrimaryKey(autoGenerate = true)
