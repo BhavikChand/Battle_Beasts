@@ -37,7 +37,6 @@ public class SignIn extends AppCompatActivity {
     setContentView(R.layout.activity_sign_in);
 
     wireUpDisplay();
-
     getDataBase();
   }
 
@@ -80,7 +79,6 @@ public class SignIn extends AppCompatActivity {
       Toast.makeText(this, "no user " + mUsername + " found", Toast.LENGTH_SHORT).show();
       return false;
     }
-
     return true;
   }
 

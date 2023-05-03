@@ -269,11 +269,11 @@ public class MainActivity extends AppCompatActivity {
 //    }
 //  }
 //
-//  public static Intent intentFactory(Context context, int userId) {
-//    //                         Intent(at, going);
-//    Intent intent = new Intent(context, MainActivity.class);
-//    intent.putExtra(USER_ID_KEY, userId);
-//
-//    return intent;
-//  }
+  public static Intent intentFactory(Context context, int userId) {
+    //                         Intent(at, going);
+    Intent intent = new Intent(context, MainActivity.class);
+    intent.putExtra(USER_ID_KEY, userId);
+
+    return intent;
+  }
 }
