@@ -23,34 +23,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/homePageSignUpButton"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/homePageSignUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePageBattleBeastsText"
+        tools:layout_editor_absoluteX="208dp" />
 
     <Button
         android:id="@+id/homePageDemoAccountUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Demo Account User"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toEndOf="@+id/homePageDemoPublicUserButton"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintStart_toEndOf="@+id/homePageDemoPublicUserButton" />
 
     <Button
         android:id="@+id/homePageDemoPublicUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
         android:text="Demo Public User"
-        tools:layout_editor_absoluteX="344dp"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homePageSignUpButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

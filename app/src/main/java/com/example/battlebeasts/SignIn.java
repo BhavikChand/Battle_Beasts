@@ -5,6 +5,7 @@ import androidx.room.Room;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,7 @@ public class SignIn extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     setContentView(R.layout.activity_sign_in);
 
     wireUpDisplay();
@@ -56,6 +58,8 @@ public class SignIn extends AppCompatActivity {
             Intent intent = MainActivity.intentFactory(getApplicationContext(), mUser.getUserId());
             startActivity(intent);
           }
+        } else {
+          Toast.makeText(SignIn.this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
         }
       }
     });
@@ -71,7 +75,6 @@ public class SignIn extends AppCompatActivity {
   }
 
   private boolean checkForUserInDatabase() {
-    //TODO Not sure why this is working. Going to ask TA.
     mUser = mBattleLogDAO.getUserByUserName(mUsername);
     if (mUser == null) {
       Toast.makeText(this, "no user " + mUsername + " found", Toast.LENGTH_SHORT).show();
